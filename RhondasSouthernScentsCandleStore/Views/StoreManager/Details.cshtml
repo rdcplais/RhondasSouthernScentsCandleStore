@@ -1,0 +1,58 @@
+﻿@model RhondasSouthernScentsCandleStore.Models.Candle
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Candle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CandleCategory.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandleCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scent.ScentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scent.ScentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandleDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandleDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandleImgUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandleImgUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CandleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

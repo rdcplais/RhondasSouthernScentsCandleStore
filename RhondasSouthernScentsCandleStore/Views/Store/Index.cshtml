@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RhondasSouthernScentsCandleStore.Models.CandleCategory>
+
+@{
+    ViewBag.Title = "Store";
+}
+
+<h2>Browse Candle Categories</h2>
+
+<p>
+    Select from @Model.Count()
+    candlecategories:
+</p>
+@*<ul>
+    @foreach (var CandleCategory in Model)
+    {
+        <li><a href="/Store/Browse?categoryname=@CandleCategory.CategoryName">@CandleCategory.CategoryName</a></li>
+
+    }
+
+    @Html.ActionLink("Go to the Store Index", "Index")
+</ul>*@
+
+<ul>
+    @foreach (var CandleCategory in Model)
+    {
+        <li>
+            @Html.ActionLink(CandleCategory.CategoryName, "Browse", new { CandleCategory = CandleCategory.CategoryName })
+    </li>
+    }
+</ul>
+

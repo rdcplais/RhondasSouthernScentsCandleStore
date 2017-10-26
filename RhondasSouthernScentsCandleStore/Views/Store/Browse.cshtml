@@ -1,0 +1,18 @@
+﻿@model RhondasSouthernScentsCandleStore.Models.CandleCategory
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Candle Category:  @Model.CategoryName</h2>
+
+<ul>
+    @foreach (var candle in Model.Candles)
+    {
+        <li>
+            @Html.ActionLink(candle.CandleDesc,"Details", new { id = candle.CandleID})
+            @*@candle.CandleDesc*@
+        </li>
+    }
+</ul>
+

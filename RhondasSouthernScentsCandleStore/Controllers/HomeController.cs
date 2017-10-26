@@ -10,19 +10,26 @@ namespace RhondasSouthernScentsCandleStore.Controllers
     {
         public ActionResult Index()
         {
+            //        var candlecategories = new List<candle>
+            //{
+            //    new CandleCategory { Name = "Disco"},
+            //    new CandleCategory { Name = "Jazz"},
+            //    new CandleCategory { Name = "Rock"}
+            //};
+            //        return View(genres);
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Everything you want to know...";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Rhonda's Place";
 
             return View();
         }
